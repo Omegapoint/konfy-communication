@@ -1,0 +1,11 @@
+micronaut:
+  application:
+    name: communication
+---
+consul:
+  client:
+    registration:
+      ip-addr: 172.16.13.98
+      prefer-ip-address: true
+      enabled: true
+    defaultZone: "${CONSUL_HOST:172.16.13.25}:${CONSUL_PORT:8500}"
